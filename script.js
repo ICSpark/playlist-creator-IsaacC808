@@ -1,5 +1,32 @@
+let playlist = [];
 
-
+function addSong() {
+    let title = document.getElementById("songTitle").value;
+    let artist = document.getElementById("artist").value;
+    let duration = document.getElementById("duration").value;
+    let Song = {
+        songTitle: title,
+        songArtist: artist,
+        songDuration: duration,
+    } 
+    if (title == '') {
+        alert("Song slots are empty, please fill them in")
+        return;
+    }
+    if (artist == '') {
+        alert("Song slots are empty, please fill them in")
+        return;
+    }
+    if (duration == '') {
+        alert("Song slots are empty, please fill them in")
+        return;
+    }
+    playlist.push(Song);
+    displayPlaylist();
+    document.getElementById('songTitle').value = '';
+    document.getElementById('artist').value = '';
+    document.getElementById('duration').value = '';
+}
 
 
 
